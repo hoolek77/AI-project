@@ -2,6 +2,8 @@ from picamera import PiCamera
 from time import sleep
 import datetime
 import os
+from rekognition import recognize_img
+from tts import speak
 
 camera = PiCamera()
 lastPhotos = []
@@ -15,4 +17,9 @@ while( True ):
     lastPhotos.append(fileName)
     camera.capture(fileName)
     
-    sleep(2)
+    result = recognize_img(fileName)
+    print(result)
+    for res in result:
+        speak(res)
+
+    sleep(5)
