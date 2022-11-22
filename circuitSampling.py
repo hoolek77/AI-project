@@ -7,7 +7,7 @@ sequence = {}
 
 while 1:
     cmd = input()
-    print(cmd)
+    print(sequence)
     currentIteration = []
     currentIteration.append(makePhoto())
     if(cmd == 'w'):
