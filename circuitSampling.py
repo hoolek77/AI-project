@@ -3,32 +3,31 @@ from main.py import makePhoto
 import json
 from time import sleep
 
-sequence = {}
+sequence = []
 
 while 1:
     cmd = input()
     print(sequence)
-    currentIteration = []
-    currentIteration.append(makePhoto())
+    currentIteration = {}
+    currentIteration["photo"] = makePhoto()
     if(cmd == 'w'):
-        currentIteration.append('w')
+        currentIteration["action"] = 'w'
         forward()
         sleep(1)
     if(cmd == 's'):
-        currentIteration.append('s')
+        currentIteration["action"] = 's'
         backward()
         sleep(1)
     if(cmd == 'a'):
-        currentIteration.append('a')
+        currentIteration["action"] = 'a'
         left()
         sleep(1)
     if(cmd == 'd'):
-        currentIteration.append('d')
+        currentIteration["action"] = 'd'
         right()
         sleep(1)
     if(cmd == 'z'):
-        currentIteration.append('x')
-        with open("sequence.json", "w") as outfile:
+        with open("./training_sets/sequence.json", "w") as outfile:
           outfile.write(json.dumps(sequence, indent=4))
-    sequence.append[currentIteration]
+    sequence.append(currentIteration)
     
