@@ -25,7 +25,7 @@ while 1:
     if(cmd == 'w'):
         currentIteration["action"] = 'forward'
         forward()
-        sleepWithStop(0.5)
+        sleepWithStop(1)
     if(cmd == 's'):
         currentIteration["action"] = 'backward'
         backward()
