@@ -10,7 +10,7 @@ sequencesPath = "./sequences/"
 if(os.path.exists(sequencesPath) == False):
   os.mkdir(sequencesPath)
 
-currentSeqPath = sequencesPath + "sequence_" + str(len(next(os.walk(sequencesPath))[1])+1)
+currentSeqPath = sequencesPath + "sequence_" + str(len(next(os.walk(sequencesPath))[1])+1) + "/"
 os.mkdir(currentSeqPath)
 
 while 1:
@@ -32,7 +32,7 @@ while 1:
         currentIteration["action"] = 'right'
         right()
     if(cmd == 'z'):
-        with open(currentSeqPath + "/sequence.json", "w") as outfile:
+        with open(currentSeqPath + "sequence.json", "w") as outfile:
           outfile.write(json.dumps(seqJson, indent=4))
         break
     seqJson["sequence"].append(currentIteration)
