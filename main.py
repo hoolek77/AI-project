@@ -9,7 +9,7 @@ camera = PiCamera()
 lastPhotos = []
 
 def makePhoto():
-    fileName = "./" + str(datetime.datetime.now()) + ".jpg"
+    fileName = "./photos/" + str(datetime.datetime.now()) + ".jpg"
     camera.capture(fileName)
     return fileName
 

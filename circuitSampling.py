@@ -26,10 +26,9 @@ while 1:
         currentIteration.append('d')
         right()
         sleep(1)
-    if(cmd == 'x'):
+    if(cmd == 'z'):
         currentIteration.append('x')
-        stop()
         with open("sequence.json", "w") as outfile:
           outfile.write(json.dumps(sequence, indent=4))
     sequence.append[currentIteration]
-    stop()
+    
