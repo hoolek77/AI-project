@@ -1,5 +1,5 @@
-from motor.py import forward, backward, left, right, stop
-from main.py import makePhoto
+from motor import forward, backward, left, right, stop
+from main import makePhoto
 import json
 from time import sleep
 import os
