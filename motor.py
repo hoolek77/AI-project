@@ -62,23 +62,23 @@ def sleepWithStop(sec):
     sleep(sec)
     stop()
 
-while 1:
-    cmd = input()
-    print(cmd)
+# while 1:
+#     cmd = input()
+#     print(cmd)
 
-    if(cmd == 'w'):
-        forward()
-        sleepWithStop(1)
-    if(cmd == 's'):
-        backward()
-        sleepWithStop(1)
-    if(cmd == 'a'):
-        left()
-        sleepWithStop(1)
-    if(cmd == 'd'):
-        right()
-        sleepWithStop(1)
-    if(cmd == 'x'):
-        stop()
-    if (cmd == 'z'):
-        break
+#     if(cmd == 'w'):
+#         forward()
+#         sleepWithStop(1)
+#     if(cmd == 's'):
+#         backward()
+#         sleepWithStop(1)
+#     if(cmd == 'a'):
+#         left()
+#         sleepWithStop(1)
+#     if(cmd == 'd'):
+#         right()
+#         sleepWithStop(1)
+#     if(cmd == 'x'):
+#         stop()
+#     if (cmd == 'z'):
+#         break
