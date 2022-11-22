@@ -1,3 +1,4 @@
+from picamera import PiCamera
 from time import sleep
 import os
 from rekognition import recognize_img
@@ -8,6 +9,8 @@ lastPhotos = []
 
 photosPath = "./photos/"
 
+camera = PiCamera()
+
 if(os.path.exists(photosPath) == False):
   os.mkdir(photosPath)
     
@@ -16,7 +19,7 @@ while( True ):
         os.remove(photosPath + lastPhotos[0])
         lastPhotos.pop(0)
     
-    lastPhotos.append(makePhoto())
+    lastPhotos.append(makePhoto(photosPath, camera))
     
     result = recognize_img(lastPhotos[-1])
     print(result)

@@ -1,7 +1,10 @@
+from picamera import PiCamera
 from motor import forward, backward, left, right, stop
 from makePhoto import makePhoto
 import json
 import os
+
+camera = PiCamera()
 
 seqJson = {"sequence": []}
 
@@ -18,7 +21,7 @@ while 1:
     print(cmd)
     print(seqJson["sequence"])
     currentIteration = {}
-    currentIteration["photo"] = makePhoto(currentSeqPath)
+    currentIteration["photo"] = makePhoto(currentSeqPath, camera)
     if(cmd == 'w'):
         currentIteration["action"] = 'forward'
         forward()
