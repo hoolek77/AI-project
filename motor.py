@@ -40,7 +40,7 @@ def right():
     GPIO.output(IN2, GPIO.HIGH)
     GPIO.output(ENB, GPIO.LOW)
     GPIO.output(IN3, GPIO.LOW)
-    GPIO.output(IN4, GPIO.LOW)
+    GPIO.output(IN4, GPIO.HIGH)
 
 def left():
     GPIO.output(ENB, GPIO.HIGH)
@@ -48,7 +48,7 @@ def left():
     GPIO.output(IN4, GPIO.HIGH)
     GPIO.output(ENA, GPIO.LOW)
     GPIO.output(IN1, GPIO.LOW)
-    GPIO.output(IN2, GPIO.LOW)
+    GPIO.output(IN2, GPIO.HIGH)
 
 def stop():
     GPIO.output(ENA, GPIO.LOW)
