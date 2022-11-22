@@ -57,7 +57,7 @@ def stop():
     GPIO.output(ENB, GPIO.LOW)
     GPIO.output(IN3, GPIO.LOW)
     GPIO.output(IN4, GPIO.LOW)
-   
+
 while 1:
     cmd = input()
     print(cmd)
@@ -75,4 +75,5 @@ while 1:
         sleep(1)
     if(cmd == 'x'):
         stop()
+    if (cmd == 'z'):
         break
