@@ -25,7 +25,7 @@ def backward():
     GPIO.output(IN2, GPIO.LOW)
     GPIO.output(IN3, GPIO.HIGH)
     GPIO.output(IN4, GPIO.LOW)
-    
+
 def forward():
     GPIO.output(ENA, GPIO.HIGH)
     GPIO.output(ENB, GPIO.HIGH)
@@ -58,21 +58,26 @@ def stop():
     GPIO.output(IN3, GPIO.LOW)
     GPIO.output(IN4, GPIO.LOW)
 
+def sleepWithStop(sec):
+    sleep(sec)
+    stop()
+
 while 1:
     cmd = input()
     print(cmd)
+
     if(cmd == 'w'):
         forward()
-        sleep(1)
+        sleepWithStop(1)
     if(cmd == 's'):
         backward()
-        sleep(1)
+        sleepWithStop(1)
     if(cmd == 'a'):
         left()
-        sleep(1)
+        sleepWithStop(1)
     if(cmd == 'd'):
         right()
-        sleep(1)
+        sleepWithStop(1)
     if(cmd == 'x'):
         stop()
     if (cmd == 'z'):
