@@ -8,14 +8,19 @@ from tts import speak
 camera = PiCamera()
 lastPhotos = []
 
-def makePhoto():
-    fileName = "./photos/" + str(datetime.datetime.now()) + ".jpg"
+photosPath = "./photos/"
+
+if(os.path.exists(photosPath) == False):
+  os.mkdir(photosPath)
+
+def makePhoto(path = photosPath):
+    fileName = path + str(datetime.datetime.now()) + ".jpg"
     camera.capture(fileName)
-    return fileName
+    return fileName    
 
 while( True ):
     if(len(lastPhotos) >=10):
-        os.remove(lastPhotos[0])
+        os.remove(photosPath + lastPhotos[0])
         lastPhotos.pop(0)
     
     lastPhotos.append(makePhoto())

@@ -2,32 +2,39 @@ from motor.py import forward, backward, left, right, stop
 from main.py import makePhoto
 import json
 from time import sleep
+import os
 
-sequence = []
+seqJson = {"sequence": []}
+
+sequencesPath = "./sequences/"
+
+if(os.path.exists(sequencesPath) == False):
+  os.mkdir(sequencesPath)
+
+currentSeqPath = sequencesPath + "sequence_" + str(len(next(os.walk(sequencesPath))[1])+1)
+os.mkdir(currentSeqPath)
 
 while 1:
     cmd = input()
-    print(sequence)
+    print(cmd)
+    print(seqJson["sequence"])
     currentIteration = {}
-    currentIteration["photo"] = makePhoto()
+    currentIteration["photo"] = makePhoto(currentSeqPath)
     if(cmd == 'w'):
         currentIteration["action"] = 'w'
         forward()
-        sleep(1)
     if(cmd == 's'):
         currentIteration["action"] = 's'
         backward()
-        sleep(1)
     if(cmd == 'a'):
         currentIteration["action"] = 'a'
         left()
-        sleep(1)
     if(cmd == 'd'):
         currentIteration["action"] = 'd'
         right()
-        sleep(1)
     if(cmd == 'z'):
-        with open("./training_sets/sequence.json", "w") as outfile:
-          outfile.write(json.dumps(sequence, indent=4))
-    sequence.append(currentIteration)
+        with open(currentSeqPath + "/sequence.json", "w") as outfile:
+          outfile.write(json.dumps(seqJson, indent=4))
+        break
+    seqJson["sequence"].append(currentIteration)
     
