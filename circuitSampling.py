@@ -1,4 +1,4 @@
-from motor import forward, backward, left, right
+from motor import forward, backward, left, right, stop
 from makePhoto import makePhoto
 import json
 import os
@@ -31,6 +31,8 @@ while 1:
     if(cmd == 'd'):
         currentIteration["action"] = 'right'
         right()
+    if(cmd == 'x'):
+        stop()
     if(cmd == 'z'):
         with open(currentSeqPath + "sequence.json", "w") as outfile:
           outfile.write(json.dumps(seqJson, indent=4))
