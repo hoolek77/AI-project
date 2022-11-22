@@ -1,6 +1,5 @@
 import speake3
 
-    
 def speak(phrase):
     engine = speake3.Speake()
     engine.set('voice', 'en')
