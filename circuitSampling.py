@@ -1,5 +1,5 @@
 from picamera import PiCamera
-from motor import forward, backward, left, right, stop
+from motor import forward, backward, left, right, stop, sleepWithStop
 from makePhoto import makePhoto
 import json
 import os
@@ -25,15 +25,19 @@ while 1:
     if(cmd == 'w'):
         currentIteration["action"] = 'forward'
         forward()
+        sleepWithStop(0.5)
     if(cmd == 's'):
         currentIteration["action"] = 'backward'
         backward()
+        sleepWithStop(0.5)
     if(cmd == 'a'):
         currentIteration["action"] = 'left'
         left()
+        sleepWithStop(0.5)
     if(cmd == 'd'):
         currentIteration["action"] = 'right'
         right()
+        sleepWithStop(0.5)
     if(cmd == 'x'):
         stop()
     if(cmd == 'z'):
