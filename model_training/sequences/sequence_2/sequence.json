@@ -1,163 +1,63 @@
 {
     "sequence": [
         {
-            "photo": "./sequences/sequence_2/2022-11-22 10:31:22.562422.jpg",
-            "action": "backward"
+            "photo": "./sequences/sequence_2/2022-11-29 09:28:43.506697.jpg",
+            "action": "forward"
         },
         {
-            "photo": "./sequences/sequence_2/2022-11-22 10:31:24.257008.jpg",
-            "action": "backward"
+            "photo": "./sequences/sequence_2/2022-11-29 09:28:46.147194.jpg",
+            "action": "forward"
         },
         {
-            "photo": "./sequences/sequence_2/2022-11-22 10:31:26.107189.jpg",
-            "action": "backward"
+            "photo": "./sequences/sequence_2/2022-11-29 09:28:48.943225.jpg",
+            "action": "forward"
         },
         {
-            "photo": "./sequences/sequence_2/2022-11-22 10:31:27.945780.jpg",
-            "action": "backward"
+            "photo": "./sequences/sequence_2/2022-11-29 09:28:52.622967.jpg",
+            "action": "left"
         },
         {
-            "photo": "./sequences/sequence_2/2022-11-22 10:31:29.418618.jpg",
-            "action": "backward"
+            "photo": "./sequences/sequence_2/2022-11-29 09:28:55.605123.jpg",
+            "action": "left"
         },
         {
-            "photo": "./sequences/sequence_2/2022-11-22 10:31:30.886911.jpg",
-            "action": "backward"
+            "photo": "./sequences/sequence_2/2022-11-29 09:28:57.570139.jpg",
+            "action": "forward"
         },
         {
-            "photo": "./sequences/sequence_2/2022-11-22 10:31:33.783267.jpg",
+            "photo": "./sequences/sequence_2/2022-11-29 09:29:00.208245.jpg",
+            "action": "forward"
+        },
+        {
+            "photo": "./sequences/sequence_2/2022-11-29 09:29:02.685005.jpg",
             "action": "right"
         },
         {
-            "photo": "./sequences/sequence_2/2022-11-22 10:31:35.442884.jpg",
+            "photo": "./sequences/sequence_2/2022-11-29 09:29:04.073916.jpg",
             "action": "right"
         },
         {
-            "photo": "./sequences/sequence_2/2022-11-22 10:31:37.272636.jpg",
+            "photo": "./sequences/sequence_2/2022-11-29 09:29:05.391159.jpg",
             "action": "right"
         },
         {
-            "photo": "./sequences/sequence_2/2022-11-22 10:31:38.587088.jpg",
+            "photo": "./sequences/sequence_2/2022-11-29 09:29:07.450679.jpg",
             "action": "forward"
         },
         {
-            "photo": "./sequences/sequence_2/2022-11-22 10:31:40.766919.jpg",
+            "photo": "./sequences/sequence_2/2022-11-29 09:29:09.671063.jpg",
             "action": "forward"
         },
         {
-            "photo": "./sequences/sequence_2/2022-11-22 10:31:42.882654.jpg",
+            "photo": "./sequences/sequence_2/2022-11-29 09:29:11.652397.jpg",
             "action": "left"
         },
         {
-            "photo": "./sequences/sequence_2/2022-11-22 10:31:44.391137.jpg",
-            "action": "forward"
-        },
-        {
-            "photo": "./sequences/sequence_2/2022-11-22 10:31:46.130822.jpg",
-            "action": "right"
-        },
-        {
-            "photo": "./sequences/sequence_2/2022-11-22 10:31:47.534717.jpg",
-            "action": "right"
-        },
-        {
-            "photo": "./sequences/sequence_2/2022-11-22 10:31:48.810324.jpg",
-            "action": "right"
-        },
-        {
-            "photo": "./sequences/sequence_2/2022-11-22 10:31:50.176699.jpg",
-            "action": "right"
-        },
-        {
-            "photo": "./sequences/sequence_2/2022-11-22 10:31:51.538299.jpg",
-            "action": "forward"
-        },
-        {
-            "photo": "./sequences/sequence_2/2022-11-22 10:31:53.406485.jpg",
-            "action": "forward"
-        },
-        {
-            "photo": "./sequences/sequence_2/2022-11-22 10:31:55.626053.jpg",
-            "action": "forward"
-        },
-        {
-            "photo": "./sequences/sequence_2/2022-11-22 10:31:57.502147.jpg",
+            "photo": "./sequences/sequence_2/2022-11-29 09:29:15.049340.jpg",
             "action": "left"
         },
         {
-            "photo": "./sequences/sequence_2/2022-11-22 10:31:58.817949.jpg",
-            "action": "left"
-        },
-        {
-            "photo": "./sequences/sequence_2/2022-11-22 10:32:00.166656.jpg",
-            "action": "backward"
-        },
-        {
-            "photo": "./sequences/sequence_2/2022-11-22 10:32:01.489907.jpg",
-            "action": "left"
-        },
-        {
-            "photo": "./sequences/sequence_2/2022-11-22 10:32:02.790033.jpg",
-            "action": "left"
-        },
-        {
-            "photo": "./sequences/sequence_2/2022-11-22 10:32:04.177897.jpg",
-            "action": "left"
-        },
-        {
-            "photo": "./sequences/sequence_2/2022-11-22 10:32:05.843911.jpg",
-            "action": "left"
-        },
-        {
-            "photo": "./sequences/sequence_2/2022-11-22 10:32:07.113606.jpg",
-            "action": "forward"
-        },
-        {
-            "photo": "./sequences/sequence_2/2022-11-22 10:32:08.792681.jpg",
-            "action": "left"
-        },
-        {
-            "photo": "./sequences/sequence_2/2022-11-22 10:32:10.763714.jpg",
-            "action": "left"
-        },
-        {
-            "photo": "./sequences/sequence_2/2022-11-22 10:32:12.749397.jpg",
-            "action": "left"
-        },
-        {
-            "photo": "./sequences/sequence_2/2022-11-22 10:32:14.521202.jpg",
-            "action": "backward"
-        },
-        {
-            "photo": "./sequences/sequence_2/2022-11-22 10:32:16.381202.jpg",
-            "action": "left"
-        },
-        {
-            "photo": "./sequences/sequence_2/2022-11-22 10:32:18.072605.jpg",
-            "action": "left"
-        },
-        {
-            "photo": "./sequences/sequence_2/2022-11-22 10:32:19.428783.jpg",
-            "action": "forward"
-        },
-        {
-            "photo": "./sequences/sequence_2/2022-11-22 10:32:21.289320.jpg",
-            "action": "forward"
-        },
-        {
-            "photo": "./sequences/sequence_2/2022-11-22 10:32:22.943645.jpg",
-            "action": "left"
-        },
-        {
-            "photo": "./sequences/sequence_2/2022-11-22 10:32:24.241424.jpg",
-            "action": "forward"
-        },
-        {
-            "photo": "./sequences/sequence_2/2022-11-22 10:32:26.181728.jpg",
-            "action": "forward"
-        },
-        {
-            "photo": "./sequences/sequence_2/2022-11-22 10:32:28.127759.jpg",
+            "photo": "./sequences/sequence_2/2022-11-29 09:29:16.757980.jpg",
             "action": "forward"
         }
     ]
