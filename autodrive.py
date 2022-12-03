@@ -45,17 +45,17 @@ photo = img_preprocess(imread(path))
 cmd = predict(photo)
 print(cmd)
 
-# while 1:
-#     path = makePhoto(currentDriveSeqPath, camera)
-#     photo = img_preprocess(imread(path))
-#     cmd = predict(photo)
-#     print(cmd)
-#     if(cmd == 1):
-#         forward()
-#         sleepWithStop(1)
-#     if(cmd == 3):
-#         left()
-#         sleepWithStop(0.5)
-#     if(cmd == 4):
-#         right()
-#         sleepWithStop(0.5)
+while 1:
+    path = makePhoto(currentDriveSeqPath, camera)
+    photo = img_preprocess(imread(path))
+    cmd = predict(photo)
+    print(cmd)
+    if(cmd == 1):
+        forward()
+        sleepWithStop(1)
+    if(cmd == 3):
+        left()
+        sleepWithStop(0.5)
+    if(cmd == 4):
+        right()
+        sleepWithStop(0.5)
