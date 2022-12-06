@@ -59,15 +59,6 @@
         {
             "photo": "./sequences/sequence_2/2022-11-29 09:29:16.757980.jpg",
             "action": "forward"
-        },
-        {
-            "photo": "./sequences/sequence_2/2022-11-29 09:29:19.625412.jpg"
-        },
-        {
-            "photo": "./sequences/sequence_2/2022-11-29 09:29:20.003319.jpg"
-        },
-        {
-            "photo": "./sequences/sequence_2/2022-11-29 09:29:20.448608.jpg"
         }
     ]
 }
