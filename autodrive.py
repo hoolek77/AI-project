@@ -1,11 +1,11 @@
-# from makePhoto import makePhoto
-# from motor import forward, left, right, sleepWithStop
+from makePhoto import makePhoto
+from motor import forward, left, right, sleepWithStop
 import numpy as np
-# from picamera import PiCamera
+from picamera import PiCamera
 from keras.models import load_model
 import cv2, os
 
-# camera = PiCamera()
+camera = PiCamera()
 
 drivePath = "./drive/"
 
@@ -49,17 +49,17 @@ photo = np.array([img_preprocess(imread(path))])
 cmd = predict(photo)
 print(cmd)
 
-# while 1:
-#     path = makePhoto(currentDriveSeqPath, camera)
-#     photo = img_preprocess(imread(path))
-#     cmd = predict(photo)
-#     print(cmd)
-#     if(cmd == 1):
-#         forward()
-#         sleepWithStop(1)
-#     if(cmd == 3):
-#         left()
-#         sleepWithStop(0.5)
-#     if(cmd == 4):
-#         right()
-#         sleepWithStop(0.5)
+while 1:
+    path = makePhoto(currentDriveSeqPath, camera)
+    photo = img_preprocess(imread(path))
+    cmd = predict(photo)
+    print(cmd)
+    if(cmd == 1):
+        forward()
+        sleepWithStop(1)
+    if(cmd == 3):
+        left()
+        sleepWithStop(0.5)
+    if(cmd == 4):
+        right()
+        sleepWithStop(0.5)
