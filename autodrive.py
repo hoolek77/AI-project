@@ -1,10 +1,11 @@
-from makePhoto import makePhoto
-from motor import forward, left, right, sleepWithStop
-from picamera import PiCamera
+# from makePhoto import makePhoto
+# from motor import forward, left, right, sleepWithStop
+import numpy as np
+# from picamera import PiCamera
 from keras.models import load_model
 import cv2, os
 
-camera = PiCamera()
+# camera = PiCamera()
 
 drivePath = "./drive/"
 
@@ -29,8 +30,10 @@ def predict(image)->int:
     Y_pred = model.predict([image])
     for y in Y_pred:
         print(y)
-        if (y < 3):
+        if (y < 2.6):
             return 1
+        elif (y >= 2.8 and y < 3.2):
+            return 3
         elif (y >= 3.2110):
             return 4
         else:
@@ -41,22 +44,22 @@ def imread(image_path):
     image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
     return image
 
-path = 'model_training/sequences/sequence_2/2022-11-29 09:29:04.073916.jpg'
-photo = img_preprocess(imread(path))
+path = 'model_training/sequences/sequence_3/2022-11-29 09:30:29.356635.jpg'
+photo = np.array([img_preprocess(imread(path))])
 cmd = predict(photo)
 print(cmd)
 
-while 1:
-    path = makePhoto(currentDriveSeqPath, camera)
-    photo = img_preprocess(imread(path))
-    cmd = predict(photo)
-    print(cmd)
-    if(cmd == 1):
-        forward()
-        sleepWithStop(1)
-    if(cmd == 3):
-        left()
-        sleepWithStop(0.5)
-    if(cmd == 4):
-        right()
-        sleepWithStop(0.5)
+# while 1:
+#     path = makePhoto(currentDriveSeqPath, camera)
+#     photo = img_preprocess(imread(path))
+#     cmd = predict(photo)
+#     print(cmd)
+#     if(cmd == 1):
+#         forward()
+#         sleepWithStop(1)
+#     if(cmd == 3):
+#         left()
+#         sleepWithStop(0.5)
+#     if(cmd == 4):
+#         right()
+#         sleepWithStop(0.5)
