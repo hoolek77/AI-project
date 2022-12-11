@@ -45,14 +45,14 @@ def imread(image_path):
     return image
 
 path = 'model_training/sequences/sequence_3/2022-11-29 09:30:29.356635.jpg'
-photo = np.array([img_preprocess(imread(path))])
+photo = np.array(np.array([img_preprocess(imread(path))]))
 cmd = predict(photo)
 print(cmd)
 
 while 1:
     path = makePhoto(currentDriveSeqPath, camera)
     photo = img_preprocess(imread(path))
-    cmd = predict(photo)
+    cmd = predict(np.array([photo]))
     print(cmd)
     if(cmd == 1):
         forward()
