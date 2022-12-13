@@ -72,7 +72,7 @@ while 1:
 
         index = len(next(os.walk(debugPath))[2])
         debugPath = debugPath + "/" + str(index + 1)  + "_" + direction[cmd] + "_" + str(cmd) + ".jpg"
-        cv2.imwrite(debugPath, photo)
+        camera.capture(debugPath)
 
     print(cmd)
     if(cmd == 1):
