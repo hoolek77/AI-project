@@ -45,11 +45,6 @@ def imread(image_path):
     image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
     return image
 
-path = 'model_training/sequences/sequence_3/2022-11-29 09:30:29.356635.jpg'
-photo = np.array(np.array([img_preprocess(imread(path))]))
-cmd = predict(photo)
-print(cmd)
-
 debug = False
 
 if (len(sys.argv) > 1):
