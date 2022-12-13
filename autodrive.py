@@ -1,3 +1,4 @@
+import sys
 from makePhoto import makePhoto
 from motor import forward, left, right, sleepWithStop
 import numpy as np
@@ -49,10 +50,32 @@ photo = np.array(np.array([img_preprocess(imread(path))]))
 cmd = predict(photo)
 print(cmd)
 
+debug = False
+
+if (len(sys.argv) > 1):
+    arg = sys.argv[1]
+    if ("debug" in arg):
+        debug = True
+
+direction = {
+    1: "forward",
+    2: "backward",
+    3: "left",
+}
+
 while 1:
     path = makePhoto(currentDriveSeqPath, camera)
     photo = img_preprocess(imread(path))
     cmd = predict(np.array([photo]))
+    if (debug == True):
+        debugPath = '/debug'
+        if (os.path.exists(debugPath) == False):
+            os.mkdir(debugPath)
+
+        index = len(next(os.walk(debugPath))[2])
+        debugPath = debugPath + "/" + str(index + 1)  + "_" + direction[cmd] + "_" + str(cmd) + ".jpg"
+        cv2.imwrite(debugPath, photo)
+
     print(cmd)
     if(cmd == 1):
         forward()
