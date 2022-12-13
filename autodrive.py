@@ -57,6 +57,8 @@ if (len(sys.argv) > 1):
     if ("debug" in arg):
         debug = True
 
+print(f"Debug mode: {debug}")
+
 direction = {
     1: "forward",
     2: "backward",
