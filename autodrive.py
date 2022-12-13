@@ -65,7 +65,7 @@ while 1:
     photo = img_preprocess(imread(path))
     cmd = predict(np.array([photo]))
     if (debug == True):
-        debugPath = '/debug'
+        debugPath = 'debug'
         if (os.path.exists(debugPath) == False):
             os.mkdir(debugPath)
 
