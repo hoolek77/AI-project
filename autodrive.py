@@ -58,6 +58,7 @@ direction = {
     1: "forward",
     2: "backward",
     3: "left",
+    4: "right"
 }
 
 while 1:
