@@ -25,7 +25,7 @@ def img_preprocess(image):
     image = image / 255 # normalizing, the processed image becomes black for some reason.  do we need this?
     return image
 
-model = load_model('model_training/model/lane_navigation_check.h5')
+model = load_model('model_training/model/lane_navigation_check_v2.h5')
 
 def predict(image)->int:
     Y_pred = model.predict([image])
@@ -74,7 +74,7 @@ while 1:
         debugPath = debugPath + "/" + str(index + 1)  + "_" + direction[cmd] + "_" + str(cmd) + ".jpg"
         camera.capture(debugPath)
 
-    print(cmd)
+    print('command: {0} = {1}'.format(cmd, direction[cmd]))
     if(cmd == 1):
         forward()
         sleepWithStop(1)
