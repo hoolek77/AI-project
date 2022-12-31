@@ -77,7 +77,7 @@ while 1:
     print('command: {0} = {1}'.format(cmd, direction[cmd]))
     if(cmd == 1):
         forward()
-        sleepWithStop(1)
+        sleepWithStop(0.5)
     if(cmd == 3):
         left()
         sleepWithStop(0.5)
