@@ -56,9 +56,8 @@ print(f"Debug mode: {debug}")
 
 direction = {
     1: "forward",
-    2: "backward",
-    3: "left",
-    4: "right"
+    2: "left",
+    3: "right"
 }
 
 while 1:
@@ -78,9 +77,9 @@ while 1:
     if(cmd == 1):
         forward()
         sleepWithStop(0.5)
-    if(cmd == 3):
+    if(cmd == 2):
         left()
         sleepWithStop(0.5)
-    if(cmd == 4):
+    if(cmd == 3):
         right()
         sleepWithStop(0.5)
