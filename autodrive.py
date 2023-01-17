@@ -25,17 +25,17 @@ def img_preprocess(image):
     image = image / 255 # normalizing, the processed image becomes black for some reason.  do we need this?
     return image
 
-model = load_model('model_training/model/lane_navigation_check_v2.h5')
+model = load_model('model_training/model/lane_navigation_check.h5')
 
 def predict(image)->int:
     Y_pred = model.predict([image])
     for y in Y_pred:
         print(y)
-        if (y < 1.9):
+        if (y < 1.9 and y >= 1.75):
             return 1
         elif (y >= 1.9 and y < 2.6):
             return 2
-        elif (y >= 2.6):
+        elif (y < 1.75):
             return 3
         else:
             return int(y)
