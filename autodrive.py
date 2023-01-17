@@ -31,9 +31,9 @@ def predict(image)->int:
     Y_pred = model.predict([image])
     for y in Y_pred:
         print(y)
-        if (y < 1.4):
+        if (y < 1.9):
             return 1
-        elif (y >= 1.6 and y < 2.6):
+        elif (y >= 1.9 and y < 2.6):
             return 2
         elif (y >= 2.6):
             return 3
