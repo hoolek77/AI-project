@@ -26,3 +26,13 @@ circuitSampling.py commands:
 2. After saving your sessions run the jupyter notebook in the model_training dir to train the model.
 3. The model should be saved in the model directory
 4. Run the autodrive.py to let the beast loose
+
+
+## Project Conclusions
+
+We came to a conclusion that the length of a taken action is too long. Shortening this would allow for more precise maneuvers and increased number of decisions taken, and would result in denser training sets.
+
+He can also drive without on wheel (Citroen DS much?)
+
+![](./assets/broom-broom.mp4)
+
