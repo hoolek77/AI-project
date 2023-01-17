@@ -32,7 +32,7 @@ circuitSampling.py commands:
 
 We came to a conclusion that the length of a taken action is too long. Shortening this would allow for more precise maneuvers and increased number of decisions taken, and would result in denser training sets.
 
-He can also drive without on wheel (Citroen DS much?)
+https://user-images.githubusercontent.com/68154191/212868262-8beee713-1494-449e-be7e-5c516ff017eb.mp4
 
-![](./assets/broom-broom.mp4)
+
 
